@@ -141,7 +141,24 @@ async function createNote(event) {
   }
 }
 
-
+async function deleteNote(key) {
+  if (busy || !notes.has(key)) return;
+  const note = notes.get(key);
+  setBusy(true);
+  setStatus('Deleting note...', 'loading');
+  try {
+    // Mock API: DELETE succeeds but never persists. Locally created notes may
+    // share the same returned ID; our distinct map keys remove only the chosen note.
+    const { status } = await request(`${API_URL}/${encodeURIComponent(note.id)}`, { method: 'DELETE' });
+    notes.delete(key);
+    renderNotes();
+    setStatus(`Note deleted (status ${status}, id ${note.id}).`, 'success');
+  } catch (error) {
+    setStatus(`Could not delete note. Please try again. ${error.message}`, 'error');
+  } finally {
+    setBusy(false);
+  }
+}
 
 titleInput.addEventListener('input', () => {
   titleCount.textContent = `${titleInput.value.length} / 100`;
