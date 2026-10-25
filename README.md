@@ -31,26 +31,4 @@ No build tools or npm dependencies are required. The HTML file loads `style.css`
 4. How relational database keys, join tables and indexes support a scalable application.
 5. How caching, load balancing, replicas and queues affect performance, reliability and consistency.
 
-## Suggested Git commit history
-Run each commit **after completing its corresponding task**, rather than creating artificial history. Seven meaningful commits:
-
-```bash
-git add index.html style.css api.js
-git commit -m "Add API client with GET"
-# After implementing and reviewing POST:
-git add api.js index.html
-git commit -m "Add create note with POST"
-# After implementing and reviewing DELETE:
-git add api.js
-git commit -m "Add delete with DELETE"
-git add docs/api-design.md
-git commit -m "Add API design doc"
-git add docs/data-model.md
-git commit -m "Add data model doc"
-git add docs/architecture.md
-git commit -m "Add architecture doc"
-git add README.md
-git commit -m "Add README"
-```
-
-If starting from the finished source files in this repository, use **honest commits reflecting actual changes** instead of claiming tasks were implemented separately. To submit, create a GitHub repository, connect it as `origin`, and push your branch. Verify the three Markdown files appear inside `docs/` on GitHub.
+ source files in this repository, use **honest commits reflecting actual changes** instead of claiming tasks were implemented separately. To submit, create a GitHub repository, connect it as `origin`, and push your branch. Verify the three Markdown files appear inside `docs/` on GitHub.
