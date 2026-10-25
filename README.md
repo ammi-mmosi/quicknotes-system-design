@@ -31,4 +31,4 @@ No build tools or npm dependencies are required. The HTML file loads `style.css`
 4. How relational database keys, join tables and indexes support a scalable application.
 5. How caching, load balancing, replicas and queues affect performance, reliability and consistency.
 
- source files in this repository, use **honest commits reflecting actual changes** instead of claiming tasks were implemented separately. To submit, create a GitHub repository, connect it as `origin`, and push your branch. Verify the three Markdown files appear inside `docs/` on GitHub.
+ 
